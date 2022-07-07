@@ -29,3 +29,16 @@ if (lowerCase) {
 for (var i = 0; i < passwordLength; i++) {
   passwordString += selectedArray[Math.floor(Math.random() * (selectedArray.length))];
 }
+return passwordString;
+}
+
+function getPasswordLength() {
+    var userChoice = 0;
+    while ((userChoice < 8) || (userChoice > 128)) {
+      userChoice = parseInt(window.prompt("Enter the number of characters between 8 and 128: "));
+      // Checking here to make sure the user entered a number and not a letter.
+  if (isNaN(userChoice)) {
+    // This will reset the choice value to 0 so it can restart the loop if the user entered anything besides a number.
+    userChoice = 0;
+  }
+}
