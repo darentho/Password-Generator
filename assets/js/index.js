@@ -8,6 +8,8 @@ function generatePassword() {
    //this is the empty array that will then be appended using concat.
     var selectedArray = [];
 
+    var passwordLength = getPasswordLength();
+
 
     // These if statements determine the user options and then append them to the blank array I created.
 if (lowerCase) {
@@ -66,3 +68,15 @@ function getOption(currentOption) {
       }
     }
     }
+
+    var generateBtn = document.querySelector("#generate");
+
+    function writePassword() {
+        var password = generatePassword();
+        var passwordText = document.querySelector("#password");
+      
+        passwordText.value = password;
+      
+      }
+
+      generateBtn.addEventListener("click", writePassword);
