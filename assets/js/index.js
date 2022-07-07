@@ -9,7 +9,7 @@ function generatePassword() {
     var selectedArray = [];
 
 
-    // These if statements determine the user choices and then append them to the blank array I created.
+    // These if statements determine the user options and then append them to the blank array I created.
 if (lowerCase) {
     selectedArray = selectedArray.concat(lowerCaseArr);
   }
@@ -23,3 +23,9 @@ if (lowerCase) {
     selectedArray = selectedArray.concat(specialArr);
   }
   
+
+  var passwordString = "";
+// This loop will take the appended array, randomly choose from them, then append the selections to generate a password.
+for (var i = 0; i < passwordLength; i++) {
+  passwordString += selectedArray[Math.floor(Math.random() * (selectedArray.length))];
+}
