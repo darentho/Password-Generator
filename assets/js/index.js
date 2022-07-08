@@ -11,6 +11,9 @@ function generatePassword() {
   
     var typeSelected = false;
     // This loop ensures the user selects at least one character type
+    // The variables are equal to the function Getchoice and I set the attributes correspondingly.
+    // I set an if where the variables are concacted to the arrays.
+    //at least one of the objects has to be selected in order to be true.
     while (typeSelected == false) {
       var lowerCase = getChoice("lowercase");
       var upperCase = getChoice("uppercase");
